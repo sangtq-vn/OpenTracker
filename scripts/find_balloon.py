@@ -196,7 +196,7 @@ class BalloonFinder(object):
             cv2.imshow('frame',frame)
 
             # write the frame
-            video_writer.write(frame)
+            # video_writer.write(frame)
 
             # exit if user presses ESC
             k = cv2.waitKey(5) & 0xFF
