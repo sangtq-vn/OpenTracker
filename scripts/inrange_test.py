@@ -15,7 +15,7 @@ if not camera.isOpened():
     sys.exit(0)
 
 # Load in image
-image = camera.read()
+success_flag, image=camera.read()
 
 # Create a window
 cv2.namedWindow('image')
@@ -40,8 +40,8 @@ phMin = psMin = pvMin = phMax = psMax = pvMax = 0
 output = image
 wait_time = 33
 
-while(1):
-    image = camera.read()
+while True:
+    success_flag, image=camera.read()
     # get current positions of all trackbars
     hMin = cv2.getTrackbarPos('HMin','image')
     sMin = cv2.getTrackbarPos('SMin','image')
