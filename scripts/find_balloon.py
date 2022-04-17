@@ -16,7 +16,7 @@ import cv2
 import numpy
 import math
 import balloon_config
-from web_server import Webserver
+#from web_server import Webserver
 from balloon_video import balloon_video
 import balloon_utils
 from position_vector import PositionVector
@@ -173,7 +173,7 @@ class BalloonFinder(object):
 
     # main - tests the BalloonFinder class
     def main(self):
-        web = Webserver(balloon_config.config.parser, (lambda : self.frame))
+        #web = Webserver(balloon_config.config.parser, (lambda : self.frame))
 
         # initialise camera
         balloon_video.init_camera()
@@ -183,7 +183,7 @@ class BalloonFinder(object):
         start_time = time.time()
 
         # loop for 10 seconds looking for circles
-        while(time.time() - start_time < 20):
+        while True: #(time.time() - start_time < 20):
 
             # Take each frame
             frame = balloon_video.capture_image()
@@ -204,7 +204,7 @@ class BalloonFinder(object):
                 break
 
         print "exiting..."
-        web.close()
+        # web.close()
 
         # uncomment line below if window with real-time video was displayed
         cv2.destroyAllWindows()
