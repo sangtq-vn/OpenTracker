@@ -161,10 +161,10 @@ class BalloonStrategy(object):
 
     # connect to vehicle with dronekit
     def get_vehicle_with_dronekit(self):
-        #connection_str = balloon_config.config.get_string('dronekit','connection_string','/dev/ttyUSB0') 
-        #connection_baud = balloon_config.config.get_integer('dronekit','baud', 57600)
-        #print "connecting to vehicle on %s, baud=%d" % (connection_str, connection_baud)
-        return connect('/dev/ttyUSB0' , baud=115200)
+        connection_str = balloon_config.config.get_string('dronekit','connection_string','/dev/ttyUSB0') 
+        connection_baud = balloon_config.config.get_integer('dronekit','baud', 115200)
+        print "connecting to vehicle on %s, baud=%d" % (connection_str, connection_baud)
+        return connect(connection_str , baud=connection_baud)
         #return connect('0.0.0.0:14551', wait_ready=True)
         print "connected to vehicle"
 
