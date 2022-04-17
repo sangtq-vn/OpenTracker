@@ -16,7 +16,7 @@ import cv2
 import numpy
 import math
 import balloon_config
-#from web_server import Webserver
+from web_server import Webserver
 from balloon_video import balloon_video
 import balloon_utils
 from position_vector import PositionVector
@@ -58,7 +58,6 @@ class BalloonFinder(object):
         balloon_y = 0
         balloon_radius = 0
 
-        cv2.imshow ('image_display', frame)
         # Convert BGR to HSV
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     
@@ -178,7 +177,7 @@ class BalloonFinder(object):
 
         # initialise camera
         balloon_video.init_camera()
-        video_writer = balloon_video.open_video_writer()
+        # video_writer = balloon_video.open_video_writer()
 
         # get start time
         start_time = time.time()
