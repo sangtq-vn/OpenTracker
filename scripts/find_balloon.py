@@ -57,10 +57,7 @@ class BalloonFinder(object):
         balloon_x = 0
         balloon_y = 0
         balloon_radius = 0
-        
-        if frame is None:
-            return
-            
+
         cv2.imshow ('image_display', frame)
         # Convert BGR to HSV
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)

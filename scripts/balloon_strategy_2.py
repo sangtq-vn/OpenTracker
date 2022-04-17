@@ -122,8 +122,8 @@ class BalloonStrategy(object):
 
         # start background image grabber
         if not (self.use_simulator or self.use_OpenMV):
-            pass
-            #balloon_video.start_background_capture()
+            #pass
+            balloon_video.start_background_capture()
 
         #initialise video writer
         #self.writer = None
