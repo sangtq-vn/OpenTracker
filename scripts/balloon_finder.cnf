@@ -1,12 +1,12 @@
 [dronekit]
-#connection_string = "/dev/ttyUSB0"
-#baud = 921600
+connection_string = /dev/serial0
+baud = 57600
 
 [camera]
 ## set type to 0 for webcam, 1 for RPi camera, 2 for OpenMV##
-type = 2
-width = 320
-height = 240
+type = 0
+width = 640
+height = 480
 horizontal-fov = 70.42
 vertical-fov = 43.3
 video_output_file = ~/balloon-%%Y-%%m-%%d-%%H-%%M.avi
@@ -30,7 +30,7 @@ radius_m = 0.3
 [general]
 #debug = True
 simulate = False
-OpenMV = True
+OpenMV = False
 SEARCH_YAW_SPEED = 5.0
 #SEARCH_TARGET_DELAY = 2.0
 #VEL_XY_P = 1.0

@@ -12,7 +12,7 @@
 
 import sys
 import time
-#import cv2
+import cv2
 import numpy
 import math
 import balloon_config

@@ -13,7 +13,7 @@ from os.path import expanduser
 import time
 import math
 from multiprocessing import Process, Pipe
-#import cv2
+import cv2
 import balloon_config
 
 # import pi camera if present
@@ -67,8 +67,8 @@ class BalloonVideo:
         # use webcam
         if self.camera_type == 0:
             self.camera = cv2.VideoCapture(0)
-            self.camera.set(cv2.cv.CV_CAP_PROP_FRAME_WIDTH,self.img_width)
-            self.camera.set(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT,self.img_height)
+            #self.camera.set(cv2.cv.CV_CAP_PROP_FRAME_WIDTH,self.img_width)
+            #self.camera.set(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT,self.img_height)
 
             # check we can connect to camera
             if not self.camera.isOpened():
