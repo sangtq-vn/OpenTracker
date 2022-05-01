@@ -622,24 +622,24 @@ class BalloonStrategy(object):
         while True:
 
             # only process images once home has been initialised
-            #if self.check_home():
+            if self.check_home():
 
                 # start video if required
                 #self.check_video_out()
     
                 # check if we are controlling the vehicle
-            #    self.check_status()
+                self.check_status()
 
                 # look for balloon in image
-            self.analyze_image()
+                self.analyze_image()
 
                 # search or move towards balloon
-            #    if self.search_state > 0:
+                if self.search_state > 0:
                     # search for balloon
-            #        self.search_for_balloon()
-            #    else:
+                    self.search_for_balloon()
+                else:
                     # move towards balloon
-            #        self.move_to_balloon()
+                    self.move_to_balloon()
 
                 # output stats
                # self.output_frame_rate_stats()
