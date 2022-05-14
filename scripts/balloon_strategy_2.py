@@ -164,7 +164,7 @@ class BalloonStrategy(object):
         connection_str = balloon_config.config.get_string('dronekit','connection_string','/dev/ttyUSB0') 
         connection_baud = balloon_config.config.get_integer('dronekit','baud', 115200)
         print "connecting to vehicle on %s, baud=%d" % (connection_str, connection_baud)
-        return connect(connection_str , baud=connection_baud)
+        return connect(connection_str , baud=connection_baud, wait_ready=True, heartbeat_timeout=120)
         #return connect('0.0.0.0:14551', wait_ready=True)
         print "connected to vehicle"
 
